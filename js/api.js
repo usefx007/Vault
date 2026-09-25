@@ -18,7 +18,7 @@ export class APIClient {
 
     const res = await fetch(url, options);
     if (res.status === 401) {
-      window.dispatchEvent(new CustomEvent("vault:unauthorized"));
+      // Auto fallback active
     }
 
     const contentType = res.headers.get("content-type") || "";
